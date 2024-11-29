@@ -1,0 +1,7 @@
+{
+  "name": "openstay",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
