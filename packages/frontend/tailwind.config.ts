@@ -1,7 +1,7 @@
-import sharedConfig from '../../tailwind.config'
+import baseConfig from '../../tailwind.config'
 
 export default {
-  ...sharedConfig,
+  ...baseConfig,
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
