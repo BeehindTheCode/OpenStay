@@ -13,10 +13,6 @@
     "utils:webpack:development": "webpack --config ./dist/config/webpack.config.js --env mode=production --env packageName=utils",
     "utils:webpack:production": "webpack --config ./dist/config/webpack.config.js --env mode=production --env packageName=utils"
   },
-  "dependencies": {
-    "webpack": "^5.96.1",
-    "webpack-merge": "^6.0.1"
-  },
   "devDependencies": {
     "cross-env": "^7.0.3",
     "eslint": "^9",
@@ -27,6 +23,8 @@
     "tailwindcss": "^3.4.15",
     "ts-node": "^10.9.2",
     "typescript": "^5",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-merge": "^6.0.1",
+    "webpack": "^5.96.1"
   }
 }
