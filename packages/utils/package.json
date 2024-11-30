@@ -1,0 +1,25 @@
+{
+  "name": "@openstay/utils",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:dev": "cross-env NODE_ENV=development npm-run-all clean compile webpack:development",
+    "build": "cross-env NODE_ENV=production npm-run-all clean compile webpack:production",
+    "clean": "rm -rf ./dist",
+    "compile": "tsc",
+    "lint": "npm run --prefix ../../ lint",
+    "webpack:development": "npm run --prefix ../../ utils:webpack:development",
+    "webpack:production": "npm run --prefix ../../ utils:webpack:production"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "slug": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/slug": "^5.0.9"
+  }
+}

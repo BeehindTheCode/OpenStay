@@ -5,15 +5,28 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "eslint ./packages/**/src"
+    "build": "npm-run-all build:*",
+    "build:webpack": "tsc ./webpack.config.ts --outDir ./dist/config --skipLibCheck",
+    "build:devtools": "cd ./packages/devtools && npm run build",
+    "build:utils": "cd ./packages/utils && npm run build",
+    "lint": "eslint ./packages/**/src",
+    "utils:webpack:development": "webpack --config ./dist/config/webpack.config.js --env mode=production --env packageName=utils",
+    "utils:webpack:production": "webpack --config ./dist/config/webpack.config.js --env mode=production --env packageName=utils"
+  },
+  "dependencies": {
+    "webpack": "^5.96.1",
+    "webpack-merge": "^6.0.1"
   },
   "devDependencies": {
-    "eslint-config-next": "15.0.3",
+    "cross-env": "^7.0.3",
     "eslint": "^9",
+    "eslint-config-next": "15.0.3",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8",
     "prettier": "^3.4.1",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.15",
     "ts-node": "^10.9.2",
-    "typescript": "^5"
+    "typescript": "^5",
+    "webpack-cli": "^5.1.4"
   }
 }
