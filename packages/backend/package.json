@@ -7,16 +7,30 @@
     "dist"
   ],
   "scripts": {
+    "migrations:drop": "drizzle-kit drop --config=./drizzle.config.ts",
+    "migrations:generate": "drizzle-kit generate --config=./drizzle.config.ts",
+    "db:push": "drizzle-kit push --config=drizzle.config.ts",
+    "db:drop": "node -r ts-node/register --env-file .env ./src/db/drop.ts",
+    "db:seed": "node -r ts-node/register --env-file .env ./src/db/seed.ts",
+    "db:studio": "drizzle-kit studio",
+    "db:truncate": "node -r ts-node/register --env-file .env ./src/db/truncate.ts",
     "dev": "nodemon",
     "lint": "npm run --prefix ../../ lint"
   },
   "license": "MIT",
   "dependencies": {
-    "express": "5.0.1"
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "drizzle-orm": "^0.36.4",
+    "express": "5.0.1",
+    "postgres": "^3.4.5"
   },
   "devDependencies": {
+    "@types/body-parser": "^1.19.5",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
     "@types/express": "5.0.0",
-    "@types/node": "22.10.1",
+    "@types/node": "^22.10.1",
     "nodemon": "3.1.7"
   }
 }

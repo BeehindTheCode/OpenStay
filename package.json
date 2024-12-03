@@ -6,8 +6,8 @@
   ],
   "scripts": {
     "build": "npm-run-all build:*",
-    "build:webpack": "tsc ./webpack.config.ts --outDir ./dist/config --skipLibCheck",
     "build:devtools": "cd ./packages/devtools && npm run build",
+    "build:webpack": "tsc ./webpack.config.ts --outDir ./dist/config --skipLibCheck",
     "build:utils": "cd ./packages/utils && npm run build",
     "lint": "eslint ./packages/**/src",
     "utils:webpack:development": "webpack --config ./dist/config/webpack.config.js --env mode=production --env packageName=utils",
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
+    "drizzle-kit": "^0.28.1",
     "eslint": "^9",
     "eslint-config-next": "15.0.3",
     "npm-run-all": "^4.1.5",
@@ -23,8 +24,8 @@
     "tailwindcss": "^3.4.15",
     "ts-node": "^10.9.2",
     "typescript": "^5",
+    "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",
-    "webpack-merge": "^6.0.1",
-    "webpack": "^5.96.1"
+    "webpack-merge": "^6.0.1"
   }
 }

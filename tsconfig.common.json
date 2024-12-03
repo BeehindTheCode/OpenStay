@@ -26,7 +26,8 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": false,
-    "target": "ESNext"
+    "target": "ESNext",
+    "types": ["node"]
   },
   "exclude": ["node_modules", "dist", "coverage", ".vscode", "**/__tests__/*"]
 }
